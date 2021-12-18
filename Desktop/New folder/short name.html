@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" onblur="demo(this)" id="txt"/>
+    <p></p>
+    <script type="text/javascript">
+      function demo(obj)
+      {
+        var name=obj.value;
+        var arr=name.split(" ")
+        var sname="";
+        for (var i = 0; i < arr.length-1; i++) {
+         sname=sname+arr[i].charAt(0)+"."
+        }
+        sname+=arr[arr.length-1]
+        document.querySelector("p").innerText=sname;
+        obj.value=sname;
+      }
+    </script>
+  </body>
+</html>
