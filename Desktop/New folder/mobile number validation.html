@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+     <input type="text"placeholder="Enter a mobile Number" name="" value="" id="txt">
+     <b id="msg">Message</b>
+     <button type="button" name="button" onclick="demo()" >Check</button>
+     <script type="text/javascript">
+         function demo()
+         {
+           var msg = document.getElementById("msg")
+           var i = document.getElementById("txt")
+           var v = i.value;
+           if ((v.charAt(0)=="9" || v.charAt(0)=="8" || v.charAt(0)=="7" || v.charAt(0)=="6") && v.length==10)
+            {
+             msg.innerText="Valid Mobile Number";
+             msg.style.color="green";
+             i.style.color="2px solid green"
+           }
+           else {
+             msg.innerText="Invalid Mobile Number";
+             msg.style.color="red";
+             i.style.color="2px solid red"
+           }
+         }
+     </script>
+  </body>
+</html>
+-

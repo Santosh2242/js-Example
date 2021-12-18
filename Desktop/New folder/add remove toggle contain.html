@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div{
+        height:300px;
+        width:300px;
+        text-align:center;
+        line-height:300px;
+        font-size:50px;
+        border:10px solid red;
+        float:left;
+      }
+      .a{
+        transform:rotate(-45deg);
+        color:green;
+        background:aqua;
+        transition:all ease 1s;
+           }
+      .b{
+        transform:rotate(45deg);
+        color:red;
+        background:yellow;
+          transition:all ease 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">Techpile</div>
+    <div id="box2">Technology</div>
+    <button type="button" name="button" onclick="demo1()">Add</button>
+    <button type="button" name="button" onclick="demo2()">Remove</button>
+    <button type="button" name="button" onclick="demo3()">Toggle</button>
+    <button type="button" name="button" onclick="demo4()">Contains</button>
+    <script type="text/javascript">
+      function demo1()
+      {
+        document.querySelector("#box1").classList.add("a")
+        document.querySelector("#box2").classList.add("b")
+      }
+      function demo2()
+      {
+        document.querySelector("#box1").classList.remove("a")
+        document.querySelector("#box2").classList.remove("b")
+      }
+      function demo3()
+      {
+        document.querySelector("#box1").classList.toggle("a")
+        document.querySelector("#box2").classList.toggle("b")
+      }
+      function demo4()
+      {
+        var a=document.querySelector("#box1").classList.contains("a")
+        alert(a)
+        //document.querySelector("#box2").classList.remove("b")
+      }
+    </script>
+  </body>
+</html>

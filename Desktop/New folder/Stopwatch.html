@@ -1,0 +1,81 @@
+<<html>
+<head>
+<style>
+body{
+background:black;
+}
+#outer{
+height:300px;
+width:900px;
+margin:0px auto;
+}
+.col{
+height:250px;
+width:250px;
+background:white;
+border:25px solid red;
+float:left;
+text-align:center;
+line-height:250px;
+font-size:90px;
+font-family:impact;
+}
+button{
+height:50px;
+margin:50px;
+width:100px;
+font-family:impact;
+font-size:18px;
+background:white;
+color: green;
+}
+</style>
+</head>
+<body>
+<div id = "outer">
+<div id="hh" class="col">HH</div>
+<div id="mm" class="col">MM</div>
+<div id="ss" class="col">SS</div>
+<button onclick="demo1()">start</button>
+<button onclick="demo2()">stop</button>
+<button onclick="demo3()">stops</button>
+</div>
+<script>
+ var hh=0
+ var mm=0
+ var ss=0
+ function demo(){
+ var h= document.getElementById("hh")
+ var m= document.getElementById("mm")
+ var s= document.getElementById("ss")
+ ss++
+ if(ss>=60){
+ ss=0
+ mm++
+ if(mm>=60){
+ mm=0
+ hh++
+ }
+ }
+ s.innerText=ss;
+ m.innerText=mm;
+ h.innerText=hh;
+ }
+ function demo1(){
+ a=window.setInterval(demo,1)
+ }
+ function demo2(){
+ window.clearInterval(a)
+ }
+ function demo3()
+ {
+ var h= document.getElementById("hh")
+ var m= document.getElementById("mm")
+ var s= document.getElementById("ss")
+   h.innerText="00"
+   m.innerText="00"
+   s.innerText="00"
+ }
+</script>
+</body>
+</html>

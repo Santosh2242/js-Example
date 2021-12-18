@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <img src="1.jpg" alt="">
+    <button type="button" name="button" onclick="demo()">Get Attr</button>
+    <button type="button" name="button" onclick="demo1()">Set Attr</button>
+    <script type="text/javascript">
+      function demo()
+      {
+        var im = document.querySelector("img").getAttribute("src")
+        alert(im)
+      }
+      function demo1()
+      {
+        var im = document.querySelector("img").setAttribute("src","2.jpg")
+      }
+    </script>
+  </body>
+</html>

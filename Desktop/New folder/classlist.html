@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .b{
+        background:red;
+        color:white;
+        font-size:18px;
+        border:10px solid blue;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+      <div id="box"> WELCOME TO THE WORLD OF JS </div>
+      <button type="button" name="button" onclick="demo()">Set Style</button>
+      <script type="text/javascript">
+         function demo()
+         {
+           var a = document.querySelector("#box").classList.add('b')
+         }
+      </script>
+  </body>
+</html>

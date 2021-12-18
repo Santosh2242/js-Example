@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="file" onchange="demo(this)" id="fu"/>
+    <p id="p1"></p>
+    <script type="text/javascript">
+      function demo(x)
+      {
+        var path = x.value;
+        var ext=path.substring(path.lastIndexOf('.')+1).toUpperCase();
+        var p = document.getElementById("p1")
+      if(ext=="JPG" || ext=="JPEG" || ext=="PNG")
+      {
+        p.innerText="valid file"
+        p.style.color="green"
+      }
+      else{
+        p.innerText="Invalid file"
+        p.style.color="red"
+      }
+      }
+    </script>
+  </body>
+</html>

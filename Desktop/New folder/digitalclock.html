@@ -1,0 +1,63 @@
+<<html>
+<head>
+<style>
+body{
+background:black;
+}
+#outer{
+height:300px;
+width:900px;
+margin:0px auto;
+}
+.col{
+height:250px;
+width:250px;
+background:white;
+border:25px solid red;
+float:left;
+text-align:center;
+line-height:250px;
+font-size:90px;
+font-family:impact;
+}
+</style>
+</head>
+<body>
+<div id = "outer">
+<div id="h" class="col" onload="demo()">HH</div>
+<div id="m" class="col" onload="demo()">MM</div>
+ <div id="s" class="col " onload="demo()" >SS</div>
+</div>
+     <script type="text/javascript">
+          function demo()
+          {
+            var h = document.getElementById("h")
+            var m = document.getElementById("m")
+            var s = document.getElementById("s")
+            var x = new Date()
+            status=" AM"
+            var hh=x.getHours()
+            var mm=x.getMinutes()
+            var ss=x.getSeconds()
+            if (hh>12) {
+              hh=hh-12
+              status=" PM"
+            }
+            if (hh<10) {
+              hh="0"+hh
+            }
+            if (mm<10) {
+              mm="0"+mm
+            }
+            if(ss<10)
+            {
+              ss="0"+ss
+            }
+            s.innerText=ss+status
+            m.innerText=mm
+            h.innerText=hh
+          }
+          window.setInterval(demo,1000)
+     </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <select id="ddl" name="" onchange="demo(this)">
+        <option>--Select Course--</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JS</option>
+        <option>JQUERRY</option>
+        <option>JSON</option>
+        <option>AJAX</option>
+    </select>
+    <p id="p1"></p>
+    <script type="text/javascript">
+        function demo(x)
+        {
+           //var a = document.getElementById("ddl").value
+           //alert(a)
+           document.getElementById("p1").innerText=x.value
+        }
+    </script>
+  </body>
+</html>
